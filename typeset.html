@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./fancybox/jquery.fancybox.css" />
+    <link rel="stylesheet" href="./selectric.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/2.10.0/styles/overlayscrollbars.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="wrapper-inside">
+            <div class="header-container space-between variable-height">
+                <div class="logo ps-static">
+                    <a href="">
+                        <img src="./img/logo.svg" alt="" class="mini-logo">
+                    </a>
+                </div>
+                <div class="logo-mobile">
+                    <a href="">
+                        <img src="./img/logo-mobile.svg" alt="">
+                    </a>
+                </div>
+                <div class="account-info-container">
+                    <div class="account-info">
+                        <div class="account-info-icon">
+                            <a href="">
+                                <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21.2535 10.0909L21.252 10.0895L12.4128 1.25153C12.036 0.874561 11.5351 0.666992 11.0023 0.666992C10.4695 0.666992 9.96854 0.874434 9.59162 1.25136L0.757027 10.0848C0.754064 10.0878 0.751102 10.0909 0.748139 10.0939C-0.0255919 10.8719 -0.0242377 12.1344 0.751948 12.9105C1.10652 13.2652 1.5749 13.4707 2.07565 13.4922C2.09597 13.4942 2.1165 13.4951 2.13715 13.4951H2.48944V19.9994C2.48944 21.2865 3.53674 22.3337 4.82426 22.3337H8.28239C8.6329 22.3337 8.91722 22.0495 8.91722 21.6989V16.5996C8.91722 16.0123 9.39504 15.5346 9.98242 15.5346H12.0221C12.6096 15.5346 13.0873 16.0123 13.0873 16.5996V21.6989C13.0873 22.0495 13.3715 22.3337 13.7221 22.3337H17.1803C18.4678 22.3337 19.5151 21.2865 19.5151 19.9994V13.4952H19.8418C20.3745 13.4952 20.8754 13.2877 21.2525 12.9109C22.0295 12.1334 22.0298 10.8689 21.2535 10.0909Z" fill="#111111" style="fill:#111111;fill:color(display-p3 0.0667 0.0667 0.0667);fill-opacity:1;"/>
+                                </svg>   
+                            </a>                         
+                        </div>
+                        <div class="account-info-icon">
+                            <a href="">
+                                <svg width="20" height="23" viewBox="0 0 20 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.9933 15.6678C18.9122 15.5701 18.8325 15.4724 18.7544 15.3781C17.6796 14.0781 17.0293 13.2935 17.0293 9.61328C17.0293 7.70795 16.5735 6.14461 15.6751 4.97211C15.0126 4.10592 14.1171 3.44882 12.9368 2.96321C12.9216 2.95476 12.908 2.94368 12.8967 2.93048C12.4722 1.50881 11.3104 0.556641 10.0001 0.556641C8.68987 0.556641 7.5286 1.50881 7.10405 2.92901C7.09272 2.94173 7.07935 2.95246 7.06448 2.96077C4.31007 4.09468 2.97146 6.27017 2.97146 9.61181C2.97146 13.2935 2.32218 14.0781 1.24641 15.3766C1.16824 15.4709 1.08861 15.5667 1.00751 15.6663C0.798022 15.919 0.665295 16.2263 0.625035 16.5521C0.584775 16.8778 0.638668 17.2082 0.780336 17.5042C1.08177 18.1394 1.7242 18.5336 2.45751 18.5336H17.5481C18.278 18.5336 18.9161 18.1398 19.2185 17.5077C19.3608 17.2116 19.4152 16.8809 19.3752 16.5548C19.3353 16.2287 19.2028 15.9209 18.9933 15.6678ZM10.0001 22.4434C10.7061 22.4429 11.3988 22.2512 12.0046 21.8889C12.6105 21.5265 13.107 21.0069 13.4414 20.3852C13.4572 20.3554 13.465 20.322 13.464 20.2883C13.4631 20.2547 13.4534 20.2218 13.436 20.1929C13.4186 20.1641 13.3941 20.1402 13.3647 20.1236C13.3353 20.1071 13.3022 20.0984 13.2685 20.0984H6.73276C6.69901 20.0983 6.66581 20.1069 6.63639 20.1234C6.60696 20.14 6.58232 20.1638 6.56486 20.1927C6.54739 20.2216 6.5377 20.2545 6.53674 20.2882C6.53577 20.322 6.54355 20.3554 6.55933 20.3852C6.89375 21.0068 7.39017 21.5264 7.99594 21.8887C8.60171 22.2511 9.29426 22.4428 10.0001 22.4434Z" fill="#D7D7D7" style="fill:#D7D7D7;fill:color(display-p3 0.8413 0.8413 0.8413);fill-opacity:1;"/>
+                                </svg>   
+                                <span class="notification-counter">99</span>
+                            </a>                         
+                        </div>
+                        <div class="account-info-icon">
+                            <a href="">
+                                <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.75983 8.0291C4.69224 10.1867 7.52588 11.2553 9.66442 10.2117C12.5214 9.06168 13.1735 4.9101 10.8566 2.95679C7.32407 -0.301804 1.75115 3.65565 3.75983 8.0291ZM12.683 12.4303C11.788 11.8673 10.6977 11.565 9.59061 11.5539C9.45982 11.5502 5.719 11.5428 5.7218 11.5724C2.6574 11.7111 0.169434 14.2736 0.170368 17.3686C0.222688 17.8816 0.086284 19.4393 0.25165 19.9181C0.416019 20.6052 0.809748 21.2174 1.3692 21.6557C1.92865 22.094 2.62114 22.3329 3.33474 22.3336H12.3037C14.0639 22.341 15.4859 20.8869 15.4681 19.2026V17.3686C15.4673 16.379 15.2112 15.406 14.724 14.5418C14.2367 13.6776 13.5346 12.9508 12.684 12.4303H12.683Z" fill="#D7D7D7" style="fill:#D7D7D7;fill:color(display-p3 0.8413 0.8413 0.8413);fill-opacity:1;"/>
+                                    <path d="M16.2912 9.72912H12.9904C12.3411 9.5923 12.0991 10.1562 11.6619 10.5075C12.8581 10.8601 13.9398 11.5171 14.7992 12.4127C16.0657 13.7091 16.7894 15.4318 16.8247 17.2345C16.806 17.7476 16.8761 19.4346 16.7611 19.9181H18.8044C19.6075 19.9181 20.3778 19.6025 20.9458 19.0406C21.5138 18.4788 21.833 17.7167 21.8333 16.9221V15.2128C21.8313 13.759 21.2468 12.3654 20.2079 11.3374C19.169 10.3094 17.7604 9.73107 16.2912 9.72912ZM13.2716 4.19182C13.5519 4.92589 13.6756 5.70937 13.6351 6.49303C13.5946 7.27669 13.3907 8.04359 13.0362 8.74553C13.5432 8.95449 14.0874 9.06074 14.6366 9.05798C20.2516 8.8768 20.2506 0.840784 14.6366 0.666992C13.5235 0.668455 12.4554 1.10194 11.6619 1.87429C12.3865 2.50089 12.9401 3.29788 13.2716 4.19182Z" fill="#D7D7D7" style="fill:#D7D7D7;fill:color(display-p3 0.8413 0.8413 0.8413);fill-opacity:1;"/>
+                                </svg>      
+                            </a>                      
+                        </div>
+                    </div>
+                    <div class="account-name">
+                        <p class="user-name">Иван Иванов</p>
+                        <div class="account-info-icon">
+                            <a href="">
+                                <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.16678 0.333496H8.16685C8.38787 0.333496 8.59983 0.430073 8.75611 0.601982C8.9124 0.77389 9.00019 1.00705 9.00019 1.25016C9.00019 1.49328 8.9124 1.72644 8.75611 1.89834C8.59983 2.07025 8.38787 2.16683 8.16685 2.16683H3.16678C2.94577 2.16683 2.7338 2.26341 2.57752 2.43532C2.42124 2.60722 2.33344 2.84038 2.33344 3.0835V15.9168C2.33344 16.1599 2.42124 16.3931 2.57752 16.565C2.7338 16.7369 2.94577 16.8335 3.16678 16.8335H8.16685C8.38787 16.8335 8.59983 16.9301 8.75611 17.102C8.9124 17.2739 9.00019 17.507 9.00019 17.7502C9.00019 17.9933 8.9124 18.2264 8.75611 18.3983C8.59983 18.5703 8.38787 18.6668 8.16685 18.6668H3.16678C2.50373 18.6668 1.86784 18.3771 1.39899 17.8614C0.930143 17.3456 0.666748 16.6462 0.666748 15.9168V3.0835C0.666748 2.35415 0.930143 1.65468 1.39899 1.13895C1.86784 0.623228 2.50373 0.333496 3.16678 0.333496Z" fill="currentColor"/>
+                                    <path d="M12.5777 12.5187C12.4981 12.6033 12.4346 12.7045 12.3909 12.8163C12.3473 12.9281 12.3243 13.0484 12.3233 13.1701C12.3224 13.2918 12.3434 13.4125 12.3853 13.5252C12.4272 13.6379 12.4891 13.7402 12.5674 13.8263C12.6456 13.9123 12.7387 13.9804 12.8411 14.0265C12.9435 14.0726 13.0532 14.0958 13.1639 14.0947C13.2745 14.0937 13.3839 14.0684 13.4855 14.0203C13.5872 13.9723 13.6792 13.9025 13.756 13.8149L17.0894 10.1482C17.2456 9.97635 17.3334 9.74323 17.3334 9.50016C17.3334 9.2571 17.2456 9.02398 17.0894 8.85208L13.756 5.18541C13.6792 5.09786 13.5872 5.02803 13.4855 4.97999C13.3839 4.93194 13.2745 4.90666 13.1639 4.9056C13.0532 4.90454 12.9435 4.92774 12.8411 4.97383C12.7387 5.01992 12.6456 5.08798 12.5674 5.17405C12.4891 5.26012 12.4272 5.36247 12.3853 5.47512C12.3434 5.58778 12.3224 5.70848 12.3233 5.8302C12.3243 5.95191 12.3473 6.0722 12.3909 6.18403C12.4346 6.29587 12.4981 6.39702 12.5777 6.48158L14.4886 8.5835H4.83342C4.61241 8.5835 4.40044 8.68007 4.24416 8.85198C4.08788 9.02389 4.00008 9.25705 4.00008 9.50016C4.00008 9.74328 4.08788 9.97644 4.24416 10.1483C4.40044 10.3203 4.61241 10.4168 4.83342 10.4168H14.4886L12.5777 12.5187Z" fill="currentColor"/>
+                                </svg>   
+                            </a>                             
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main ai-flex-start">
+       <div class="wrapper-inside">
+        <div class="form-container registration">
+        <form action="" class="form">
+            <h2>Создать нового пользователя</h2>
+            <div class="flex-element-list col-1">
+                <div class="flex-element-item">
+                    <p class="element-top">Обращение</p>
+                    <input type="text" placeholder="Здравствуйте, коллеги!">
+                </div>
+            </div>
+            <div class="flex-element-list col-2">
+                <div class="flex-element-item">
+                    <p class="element-top">Логин (Email)</p>
+                    <input type="text" placeholder="Логин">
+                </div>
+                <div class="flex-element-item">
+                    <p class="element-top">Пароль</p>
+                    <input type="password" placeholder="Пароль">
+                </div>
+            </div>
+            <div class="flex-element-list col-2">
+                <div class="flex-element-item">
+                    <p class="element-top">Роль пользователя</p>
+                    <label for="">
+                        <select name="" id="" class="select">
+                            <option value="">Администратор / Пользователь</option>
+                            <option value="">test-1</option>
+                            <option value="">test-2</option>
+                            <option value="">test-3</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="flex-element-item">
+                    <p class="element-top">Вход разрешен:</p>
+                    <label class="checkbox-ios">
+                        <input type="checkbox">
+                        <span class="checkbox-ios-switch"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="flex-element-list col-1">
+                <div class="flex-element-item">
+                    <p class="element-top">Клиент</p>
+                    <select name="" id="">
+                        <option value="">Клиент из справочника "Клиенты"</option>
+                        <option value="">test1</option>
+                        <option value="">test2</option>
+                        <option value="">test3</option>
+                    </select>
+                </div>
+            </div>
+            <button class="button-setting form cl-black bg-gray">Добавить клиента
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 1V6M6 11V6M6 6H1M6 6H11" stroke="#111111" style="stroke:#111111;stroke:color(display-p3 0.0667 0.0667 0.0667);stroke-opacity:1;" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                        
+            </button>
+            <button class="button-setting form mg-top">Отправить приглашение</button>
+        </form>
+        </div>
+        <hr>
+        <div class="form-container registration">
+            <form action="" class="form">
+                <h2>Пользователь</h2>
+                <div class="flex-element-list col-1">
+                    <div class="flex-element-item">
+                        <p class="element-top">Обращение</p>
+                        <input type="text" placeholder="Здравствуйте, коллеги!">
+                    </div>
+                </div>
+                <div class="flex-element-list col-2">
+                    <div class="flex-element-item">
+                        <p class="element-top">Логин (Email)</p>
+                        <input type="text" placeholder="Логин">
+                    </div>
+                    <div class="flex-element-item">
+                        <p class="element-top">Пароль</p>
+                        <input type="password" placeholder="Пароль">
+                    </div>
+                </div>
+                <div class="flex-element-list col-2 ai-baseline">
+                    <div class="flex-element-item">
+                        <p class="element-top">Роль пользователя</p>
+                        <label for="">
+                            <select name="" id="" class="select">
+                                <option value="">Администратор / Пользователь</option>
+                                <option value="">test-1</option>
+                                <option value="">test-2</option>
+                                <option value="">test-3</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="flex-element-item">
+                        <p class="element-top">Вход разрешен:</p>
+                        <label class="checkbox-ios">
+                            <input type="checkbox">
+                            <span class="checkbox-ios-switch"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="flex-element-list col-2">
+                    <div class="flex-element-item">
+                        <p class="element-top">Клиент</p>
+                        <input type="text" value="">
+                        <a href="" class="basket-form-link">
+                            <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.18689 5.27344L2.12096 16.5493C2.1879 17.3624 2.88055 18 3.69681 18H12.3032C13.1195 18 13.8121 17.3624 13.8791 16.5493L14.8131 5.27344H1.18689ZM5.36279 15.8906C5.08674 15.8906 4.8545 15.6759 4.83699 15.3962L4.30965 6.88841C4.29161 6.59746 4.51254 6.34718 4.803 6.32914C5.10425 6.30802 5.34373 6.53154 5.36226 6.82249L5.88961 15.3303C5.90827 15.6316 5.66988 15.8906 5.36279 15.8906ZM8.52734 15.3633C8.52734 15.6548 8.29148 15.8906 8 15.8906C7.70852 15.8906 7.47266 15.6548 7.47266 15.3633V6.85547C7.47266 6.56399 7.70852 6.32812 8 6.32812C8.29148 6.32812 8.52734 6.56399 8.52734 6.85547V15.3633ZM11.6904 6.88845L11.163 15.3963C11.1457 15.6731 10.9149 15.9038 10.6037 15.8896C10.3133 15.8716 10.0924 15.6213 10.1104 15.3303L10.6377 6.82253C10.6558 6.53157 10.9107 6.3199 11.197 6.32918C11.4875 6.34721 11.7084 6.59749 11.6904 6.88845ZM14.8555 2.10938H11.6914V1.58203C11.6914 0.709664 10.9817 0 10.1094 0H5.89062C5.01826 0 4.30859 0.709664 4.30859 1.58203V2.10938H1.14453C0.562027 2.10938 0.0898438 2.58156 0.0898438 3.16406C0.0898438 3.7465 0.562027 4.21875 1.14453 4.21875H14.8555C15.438 4.21875 15.9102 3.7465 15.9102 3.16406C15.9102 2.58156 15.438 2.10938 14.8555 2.10938ZM10.6367 2.10938H5.36328V1.58203C5.36328 1.29108 5.59967 1.05469 5.89062 1.05469H10.1094C10.4003 1.05469 10.6367 1.29108 10.6367 1.58203V2.10938Z" fill="#D7D7D7" style="fill:#D7D7D7;fill:color(display-p3 0.8413 0.8413 0.8413);fill-opacity:1;"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="flex-element-item">
+                        <input type="text" value="">
+                        <a href="" class="basket-form-link">
+                            <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.18689 5.27344L2.12096 16.5493C2.1879 17.3624 2.88055 18 3.69681 18H12.3032C13.1195 18 13.8121 17.3624 13.8791 16.5493L14.8131 5.27344H1.18689ZM5.36279 15.8906C5.08674 15.8906 4.8545 15.6759 4.83699 15.3962L4.30965 6.88841C4.29161 6.59746 4.51254 6.34718 4.803 6.32914C5.10425 6.30802 5.34373 6.53154 5.36226 6.82249L5.88961 15.3303C5.90827 15.6316 5.66988 15.8906 5.36279 15.8906ZM8.52734 15.3633C8.52734 15.6548 8.29148 15.8906 8 15.8906C7.70852 15.8906 7.47266 15.6548 7.47266 15.3633V6.85547C7.47266 6.56399 7.70852 6.32812 8 6.32812C8.29148 6.32812 8.52734 6.56399 8.52734 6.85547V15.3633ZM11.6904 6.88845L11.163 15.3963C11.1457 15.6731 10.9149 15.9038 10.6037 15.8896C10.3133 15.8716 10.0924 15.6213 10.1104 15.3303L10.6377 6.82253C10.6558 6.53157 10.9107 6.3199 11.197 6.32918C11.4875 6.34721 11.7084 6.59749 11.6904 6.88845ZM14.8555 2.10938H11.6914V1.58203C11.6914 0.709664 10.9817 0 10.1094 0H5.89062C5.01826 0 4.30859 0.709664 4.30859 1.58203V2.10938H1.14453C0.562027 2.10938 0.0898438 2.58156 0.0898438 3.16406C0.0898438 3.7465 0.562027 4.21875 1.14453 4.21875H14.8555C15.438 4.21875 15.9102 3.7465 15.9102 3.16406C15.9102 2.58156 15.438 2.10938 14.8555 2.10938ZM10.6367 2.10938H5.36328V1.58203C5.36328 1.29108 5.59967 1.05469 5.89062 1.05469H10.1094C10.4003 1.05469 10.6367 1.29108 10.6367 1.58203V2.10938Z" fill="#D7D7D7" style="fill:#D7D7D7;fill:color(display-p3 0.8413 0.8413 0.8413);fill-opacity:1;"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <button class="button-setting form cl-black bg-gray">Добавить клиента
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 1V6M6 11V6M6 6H1M6 6H11" stroke="#111111" style="stroke:#111111;stroke:color(display-p3 0.0667 0.0667 0.0667);stroke-opacity:1;" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                        
+                </button>
+                <button class="button-setting form mg-top">Сохранить</button>
+            </form>
+            </div>
+            <hr>
+            <div class="filter-container">
+                <h2>Фильтр</h2>
+                <div class="filter-wrapper">
+                    <div class="filter-wrapper-inside">
+                        <div class="filter-item">
+                            <div class="filter-inside">
+                                    <div class="filter-item-name">Наименование</div>
+                                    <div class="filter-item-icon">
+                                            <span></span>
+                                            <span></span>
+                                    </div>
+                            </div>
+                            <div class="filter-inside-body" style="display: none">
+                                <div class="text-detali">
+                                    <div class="search-item">
+                                        <input type="text" placeholder="Поиск">
+                                        <a href="" class="icon">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M14.9689 14.5735L11.2219 10.6129C12.1856 9.45085 12.7139 7.97978 12.7132 6.45999C12.7132 2.89801 9.86156 0 6.35659 0C2.85162 0 0 2.89801 0 6.45999C0 10.022 2.85162 12.92 6.35659 12.92C7.67241 12.92 8.92631 12.5167 9.99837 11.751L13.7739 15.7416C13.9317 15.9082 14.144 16 14.3714 16C14.5867 16 14.791 15.9166 14.946 15.7649C15.1043 15.6099 15.1955 15.3974 15.1998 15.174C15.2041 14.9507 15.1211 14.7347 14.9689 14.5735ZM6.35659 1.68522C8.94732 1.68522 11.0549 3.82713 11.0549 6.45999C11.0549 9.09286 8.94732 11.2348 6.35659 11.2348C3.76587 11.2348 1.65824 9.09286 1.65824 6.45999C1.65824 3.82713 3.76587 1.68522 6.35659 1.68522Z" fill="#D7D7D7" style="fill:#D7D7D7;fill:color(display-p3 0.8413 0.8413 0.8413);fill-opacity:1;"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div class="checkbox-items">
+                                        <div class="item">
+                                            <label class="checkbox-custom">
+                                                <input type="checkbox" name="">
+                                                <span class="checkbox"></span>
+                                                <p>Приглашение не отправлено</a></p>
+                                            </label>
+                                        </div>
+                                        <div class="item">
+                                            <label class="checkbox-custom">
+                                                <input type="checkbox" name="">
+                                                <span class="checkbox"></span>
+                                                <p>Приглашение не отправлено</a></p>
+                                            </label>
+                                        </div>
+                                        <div class="item">
+                                            <label class="checkbox-custom">
+                                                <input type="checkbox" name="">
+                                                <span class="checkbox"></span>
+                                                <p>Приглашение не отправлено</a></p>
+                                            </label>
+                                        </div>
+                                        <div class="item">
+                                            <label class="checkbox-custom">
+                                                <input type="checkbox" name="">
+                                                <span class="checkbox"></span>
+                                                <p>Приглашение не отправлено</a></p>
+                                            </label>
+                                        </div>
+                                        <div class="item">
+                                            <label class="checkbox-custom">
+                                                <input type="checkbox" name="">
+                                                <span class="checkbox"></span>
+                                                <p>Приглашение не отправлено</a></p>
+                                            </label>
+                                        </div>
+                                        <div class="item">
+                                            <label class="checkbox-custom">
+                                                <input type="checkbox" name="">
+                                                <span class="checkbox"></span>
+                                                <p>Приглашение не отправлено</a></p>
+                                            </label>
+                                        </div>
+                                        <div class="item">
+                                            <label class="checkbox-custom">
+                                                <input type="checkbox" name="">
+                                                <span class="checkbox"></span>
+                                                <p>Приглашение не отправлено</a></p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter-item">
+                            <div class="filter-inside">
+                                <div class="filter-item-name">Дата выдачи</div>
+                                <div class="filter-item-icon">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="filter-inside-body" style="display: none">
+                                <div class="text-detali">
+                                    <div class="data-picker-container">
+                                        <div class="data-input">
+                                            <input type="text" placeholder="Выберите дату" id="data-picker">
+                                            <div class="icon" id="open-calendar">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M16 2.16834V4.41383H0V2.16834C0.00587579 1.73467 0.189648 1.32094 0.511013 1.0179C0.832378 0.714861 1.2651 0.547243 1.71429 0.551809H2.85714V1.65524C2.85714 2.09422 3.03776 2.51521 3.35925 2.82562C3.68074 3.13602 4.11677 3.3104 4.57143 3.3104C5.02609 3.3104 5.46212 3.13602 5.78361 2.82562C6.1051 2.51521 6.28571 2.09422 6.28571 1.65524V0.551809H9.71429V1.65524C9.71429 2.09422 9.8949 2.51521 10.2164 2.82562C10.5379 3.13602 10.9739 3.3104 11.4286 3.3104C11.8832 3.3104 12.3193 3.13602 12.6408 2.82562C12.9622 2.51521 13.1429 2.09422 13.1429 1.65524V0.551809H14.2857C14.7349 0.547243 15.1676 0.714861 15.489 1.0179C15.8104 1.32094 15.9941 1.73467 16 2.16834ZM0 5.51727V14.3834C0.00587579 14.8171 0.189648 15.2308 0.511013 15.5338C0.832378 15.8369 1.2651 16.0045 1.71429 15.9999H14.2857C14.7349 16.0045 15.1676 15.8369 15.489 15.5338C15.8104 15.2308 15.9941 14.8171 16 14.3834V5.51727H0ZM5.14286 13.2413C5.14241 13.3875 5.08206 13.5276 4.97499 13.631C4.86792 13.7343 4.72284 13.7926 4.57143 13.793H3.42857C3.27716 13.7926 3.13208 13.7343 3.02501 13.631C2.91794 13.5276 2.8576 13.3875 2.85714 13.2413V12.1379C2.8576 11.9917 2.91794 11.8516 3.02501 11.7482C3.13208 11.6449 3.27716 11.5866 3.42857 11.5862H4.57143C4.72284 11.5866 4.86792 11.6449 4.97499 11.7482C5.08206 11.8516 5.14241 11.9917 5.14286 12.1379V13.2413ZM5.14286 9.37929C5.14241 9.52549 5.08206 9.66556 4.97499 9.76894C4.86792 9.87231 4.72284 9.93058 4.57143 9.93101H3.42857C3.27716 9.93058 3.13208 9.87231 3.02501 9.76894C2.91794 9.66556 2.8576 9.52549 2.85714 9.37929V8.27586C2.8576 8.12967 2.91794 7.98959 3.02501 7.88622C3.13208 7.78285 3.27716 7.72458 3.42857 7.72414H4.57143C4.72284 7.72458 4.86792 7.78285 4.97499 7.88622C5.08206 7.98959 5.14241 8.12967 5.14286 8.27586V9.37929ZM9.14286 13.2413C9.14241 13.3875 9.08206 13.5276 8.97499 13.631C8.86792 13.7343 8.72284 13.7926 8.57143 13.793H7.42857C7.27716 13.7926 7.13208 13.7343 7.02501 13.631C6.91794 13.5276 6.8576 13.3875 6.85714 13.2413V12.1379C6.8576 11.9917 6.91794 11.8516 7.02501 11.7482C7.13208 11.6449 7.27716 11.5866 7.42857 11.5862H8.57143C8.72284 11.5866 8.86792 11.6449 8.97499 11.7482C9.08206 11.8516 9.14241 11.9917 9.14286 12.1379V13.2413ZM9.14286 9.37929C9.14241 9.52549 9.08206 9.66556 8.97499 9.76894C8.86792 9.87231 8.72284 9.93058 8.57143 9.93101H7.42857C7.27716 9.93058 7.13208 9.87231 7.02501 9.76894C6.91794 9.66556 6.8576 9.52549 6.85714 9.37929V8.27586C6.8576 8.12967 6.91794 7.98959 7.02501 7.88622C7.13208 7.78285 7.27716 7.72458 7.42857 7.72414H8.57143C8.72284 7.72458 8.86792 7.78285 8.97499 7.88622C9.08206 7.98959 9.14241 8.12967 9.14286 8.27586V9.37929ZM13.1429 9.37929C13.1424 9.52549 13.0821 9.66556 12.975 9.76894C12.8679 9.87231 12.7228 9.93058 12.5714 9.93101H11.4286C11.2772 9.93058 11.1321 9.87231 11.025 9.76894C10.9179 9.66556 10.8576 9.52549 10.8571 9.37929V8.27586C10.8576 8.12967 10.9179 7.98959 11.025 7.88622C11.1321 7.78285 11.2772 7.72458 11.4286 7.72414H12.5714C12.7228 7.72458 12.8679 7.78285 12.975 7.88622C13.0821 7.98959 13.1424 8.12967 13.1429 8.27586V9.37929Z" fill="#D7D7D7" style="fill:#D7D7D7;fill:color(display-p3 0.8413 0.8413 0.8413);fill-opacity:1;"/>
+                                                    <path d="M5.14286 0.551718V1.65515C5.14286 1.80148 5.08265 1.94181 4.97549 2.04528C4.86833 2.14874 4.72298 2.20687 4.57143 2.20687C4.41988 2.20687 4.27453 2.14874 4.16737 2.04528C4.0602 1.94181 4 1.80148 4 1.65515V0.551718C4 0.405393 4.0602 0.265062 4.16737 0.161594C4.27453 0.0581272 4.41988 0 4.57143 0C4.72298 0 4.86833 0.0581272 4.97549 0.161594C5.08265 0.265062 5.14286 0.405393 5.14286 0.551718ZM12 0.551718V1.65515C12 1.80148 11.9398 1.94181 11.8326 2.04528C11.7255 2.14874 11.5801 2.20687 11.4286 2.20687C11.277 2.20687 11.1317 2.14874 11.0245 2.04528C10.9173 1.94181 10.8571 1.80148 10.8571 1.65515V0.551718C10.8571 0.405393 10.9173 0.265062 11.0245 0.161594C11.1317 0.0581272 11.277 0 11.4286 0C11.5801 0 11.7255 0.0581272 11.8326 0.161594C11.9398 0.265062 12 0.405393 12 0.551718Z" fill="#D7D7D7" style="fill:#D7D7D7;fill:color(display-p3 0.8413 0.8413 0.8413);fill-opacity:1;"/>
+                                                </svg>
+                                            </div>
+                                            <div class="data-body">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter-item">
+                            <div class="filter-inside">
+                                <div class="filter-item-name">Наименование</div>
+                                <div class="filter-item-icon">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter-item">
+                            <div class="filter-inside">
+                                <div class="filter-item-name">Наименование</div>
+                                <div class="filter-item-icon">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter-item">
+                            <div class="filter-inside">
+                                <div class="filter-item-name">Наименование</div>
+                                <div class="filter-item-icon">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter-item">
+                            <div class="filter-inside">
+                                <div class="filter-item-name">Наименование</div>
+                                <div class="filter-item-icon">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter-item">
+                            <div class="filter-inside">
+                                <div class="filter-item-name">Наименование</div>
+                                <div class="filter-item-icon">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter-item">
+                            <div class="filter-inside">
+                                <div class="filter-item-name">Наименование</div>
+                                <div class="filter-item-icon">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter-item">
+                            <div class="filter-inside">
+                                <div class="filter-item-name">Наименование</div>
+                                <div class="filter-item-icon">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter-item">
+                            <div class="filter-inside">
+                                <div class="filter-item-name">Наименование</div>
+                                <div class="filter-item-icon">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter-item">
+                            <div class="filter-inside">
+                                <div class="filter-item-name">Наименование</div>
+                                <div class="filter-item-icon">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter-item">
+                            <div class="filter-inside">
+                                <div class="filter-item-name">Наименование</div>
+                                <div class="filter-item-icon">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="pop-up-success">
+                <div class="pop-up-success-inside">
+                    <div class="succes-svg">
+                        <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.25024 6L5.74992 10.5L14.7499 1.5" stroke="white" style="stroke:white;stroke-opacity:1;" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                            
+                    </div>
+                    <h2>Успешно!</h2>
+                    <p>Ссылка для восстановления пароля отправлена почту.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="pop-up-success">
+                <div class="pop-up-success-inside">
+                    <div class="succes-svg">
+                        <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.25024 6L5.74992 10.5L14.7499 1.5" stroke="white" style="stroke:white;stroke-opacity:1;" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                            
+                    </div>
+                    <h2>Успешно!</h2>
+                    <p>Пригласительные ссылки отправлены.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="view-document-pop-up">
+                <div class="view-document-wrapper">
+                    <p class="title-pop-up">Просмотр документов пока недоступен</p>
+                    <p>Перейдите на полную версию сайта.</p>
+                    <a class="button-setting" href="#">Полная версия сайта</a>
+                </div>
+            </div>
+            <hr>
+            <div class="filter-users-container">
+                <div class="filter-users-inside">
+                    <form class="notification-checkbox-container">
+                        <ul class="checkbox-container">
+                            <li>
+                              <label for="checkbox1" class="checkbox-custom">
+                                <input type="checkbox" name="" id="checkbox1">
+                                <span class="checkbox"></span>
+                                <p>Приглашение не отправлено</a></p>
+                              </label>
+                            </li>
+                            <li>
+                              <label for="checkbox2" class="checkbox-custom">
+                                <input type="checkbox" name="" id="checkbox2">
+                                <span class="checkbox"></span>
+                                <p>Работает в ЛК</a></p>
+                              </label>
+                            </li>
+                            <li>
+                              <label for="checkbox3" class="checkbox-custom">
+                                <input type="checkbox" name="" id="checkbox3">
+                                <span class="checkbox"></span>
+                                <p>Приглашение отправлено</a></p>
+                              </label>
+                            </li>
+                          </ul>
+                          <a href="" class="button-setting notification mobile-none">Показать</a>
+                        </form>
+                </div>
+            </div>
+            <hr>
+            <div class="form-container">
+                <form action="" class="form">
+                    <h2>Войти</h2>
+                    <input type="text" placeholder="Логин">
+                    <input type="password" placeholder="Пароль">
+                    <div class="recovery-password">
+                        <a href="./password-recovery-email.html">Забыли пароль?</a>
+                    </div>
+                    <ul class="checkbox-container">
+                        <li>
+                          <label for="checkbox1" class="checkbox-custom">
+                            <input type="checkbox" name="" id="checkbox1">
+                            <span class="checkbox"></span>
+                            <p>Даю согласие на обработку <a href="">персональных данных</a></p>
+                          </label>
+                        </li>
+                        <li>
+                          <label for="checkbox2" class="checkbox-custom">
+                            <input type="checkbox" name="" id="checkbox2">
+                            <span class="checkbox"></span>
+                            <p>Принимаю политику обработки <a href="">персональных данных</a></p>
+                          </label>
+                        </li>
+                        <li>
+                          <label for="checkbox3" class="checkbox-custom">
+                            <input type="checkbox" name="" id="checkbox3">
+                            <span class="checkbox"></span>
+                            <p>Принимаю <a href="">пользовательское соглашение</a></p>
+                          </label>
+                        </li>
+                      </ul>
+                    <button type="submit" class="button-form">Войти</button>
+                </form>
+            </div>
+           <hr>
+
+
+       </div>
+    </main>
+    <footer class="footer">
+        <div class="wrapper-inside">
+            <div class="footer-inside">
+                <div class="footer-contacts-left-container">
+                         <div class="footer-contacts-left">
+                        <a href="" class="contact">
+                            <div class="contact-svg">
+                                <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M23.7886 1.14316L16.5099 8L23.7886 14.8568C23.9202 14.5961 24 14.3078 24 14V2C24 1.69213 23.9202 1.40391 23.7886 1.14316ZM21.8906 0H2.10938C1.78467 0 1.48069 0.075689 1.20567 0.200444L10.5086 8.97657C11.3312 9.75648 12.6688 9.75648 13.4914 8.97657L22.7943 0.200444C22.5193 0.075689 22.2153 0 21.8906 0ZM0.211406 1.14316C0.0798282 1.40391 0 1.69213 0 2V14C0 14.3079 0.0798282 14.5961 0.211406 14.8568L7.49011 8L0.211406 1.14316Z" fill="#111111" style="fill:#111111;fill:color(display-p3 0.0667 0.0667 0.0667);fill-opacity:1;"/>
+                                    <path d="M15.5156 8.94271L14.4856 9.91929C13.1151 11.2188 10.8849 11.2188 9.51431 9.91929L8.48437 8.94271L1.20567 15.7996C1.48069 15.9243 1.78467 16 2.10937 16H21.8906C22.2153 16 22.5193 15.9243 22.7943 15.7996L15.5156 8.94271Z" fill="#111111" style="fill:#111111;fill:color(display-p3 0.0667 0.0667 0.0667);fill-opacity:1;"/>
+                                </svg>                                
+                            </div>
+                            <span>info@patentural.ru</span>
+                            </a>
+                        <a href="" class="contact">
+                            <div class="contact-svg">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.21894 11.7811C7.33083 10.8946 6.54366 9.91327 5.87459 8.85529C5.63027 8.46888 5.63285 8.00464 5.88128 7.62102L6.83612 6.14682C7.03983 5.83214 7.0787 5.47311 6.947 5.12222L5.30459 0.744845C5.04741 0.0593211 4.23338 -0.211929 3.61632 0.182305L1.32499 1.64626C0.279307 2.3144 -0.206176 3.51545 0.0818881 4.72251C0.96846 8.43767 2.90217 11.7811 5.57479 14.4252C8.21894 17.0979 11.5623 19.0316 15.2775 19.9181C16.4845 20.2062 17.6856 19.7207 18.3537 18.675L19.8177 16.3837C20.212 15.7666 19.9407 14.9526 19.2551 14.6954L14.8778 13.053C14.5269 12.9213 14.1679 12.9602 13.8532 13.1639L12.379 14.1187C11.9954 14.3671 11.5312 14.3697 11.1447 14.1254C10.0867 13.4563 9.10543 12.6692 8.21894 11.7811Z" fill="#111111" style="fill:#111111;fill:color(display-p3 0.0667 0.0667 0.0667);fill-opacity:1;"/>
+                                </svg>                                                            
+                            </div>
+                            <span>8 800 222-90-53</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-info-right-container">
+                    <div class="footer-info-right">
+                        <a href="">Политика обработки персональных данных</a>
+                        <a href="">Пользовательское соглашение</a>
+                        <a href="">Согласие на обработку персональных данных</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="./fancybox/jquery.fancybox.js"></script>
+    <script src="./jquery.selectric.min.js"></script>
+    <script src="smooth-scrollbar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ru.js"></script>
+    <script type="text/javascript" src="./main.js"></script>
+</body>
+</html>
